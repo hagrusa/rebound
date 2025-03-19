@@ -731,7 +731,7 @@ int reb_collision_resolve_halt(struct reb_simulation* const r, struct reb_collis
 }
 
 int reb_collision_resolve_merge(struct reb_simulation* const r, struct reb_collision c){
-    if (r->particles[c.p1].last_collision==r->t || r->particles[c.p2].last_collision==r->t) return 0;
+    // if (r->particles[c.p1].last_collision==r->t || r->particles[c.p2].last_collision==r->t) return 0;
 
     // Every collision will cause two callbacks (with p1/p2 interchanged).
     // Always remove particle with larger index and merge into lower index particle.
